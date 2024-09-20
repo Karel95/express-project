@@ -1,6 +1,11 @@
+
 //ExpressJS
 const express = require("express");
 const app = express();
+
+//morgan
+const morgan = require("morgan");
+app.use(morgan('dev'));
 
 //app.get('/'): Define una rutas GET para el endpoint /.
 app.get("/", (req, res) => {
