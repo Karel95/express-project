@@ -5,11 +5,6 @@ node index.js
 
 
 
-https://youtu.be/JmJ1WUoUIK4?si=6YGVrgK1ncptJrFH
-1:57:35 / 4:00:29 • Middlewares
-
-
-
 Los métodos HTTPS son los mismos que los de HTTP, ya que HTTPS es simplemente la versión segura de HTTP. 
 Aquí te dejo los métodos más comunes:
 
