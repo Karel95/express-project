@@ -7,6 +7,9 @@ const app = express();
 const morgan = require("morgan");
 app.use(morgan('dev'));
 
+//path
+const path = require('path');
+
 //app.get('/'): Define una rutas GET para el endpoint /.
 app.get("/", (req, res) => {
   //res.send(): Envía una respuesta al cliente.
@@ -120,7 +123,8 @@ app.use((req, res, next) => {
   if (req.query.login === '95@karl.dev') {
     next();
   } else {
-    res.send('no autorizado')
+    next();
+    // res.send('no autorizado')
   }
 });
 
@@ -133,6 +137,12 @@ app.get('/profile', (req, res) => {
 app.all('/about', (req, res) => {
   res.send('About Page');
 });
+
+
+//static files
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
+app.use('/static',express.static('./static'))
+app.use('/public',express.static('./public'))
 
 //app.listen(): Levanta el servidor en el puerto especificado.
 app.listen(3000, () => {
