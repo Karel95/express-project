@@ -3,6 +3,10 @@
 const express = require("express");
 const app = express();
 
+//routes
+const index = require('./routes/index');
+const routes = require('./routes/routes');
+
 //morgan
 const morgan = require("morgan");
 app.use(morgan('dev'));
@@ -128,16 +132,9 @@ app.use((req, res, next) => {
   }
 });
 
-app.get('/dashboard', (req, res) => {
-  res.send('Dashboard Page');
-});
-app.get('/profile', (req, res) => {
-  res.send('Profile Page');
-});
-app.all('/about', (req, res) => {
-  res.send('About Page');
-});
-
+//router
+app.use(index)
+routes(app)
 
 //static files
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
