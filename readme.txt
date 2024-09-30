@@ -3,6 +3,9 @@ npm i express
 
 node index.js
 
+npm install ejs
+
+npm i nodemon -d
 
 
 Los métodos HTTPS son los mismos que los de HTTP, ya que HTTPS es simplemente la versión segura de HTTP. 

@@ -14,6 +14,13 @@ app.use(morgan('dev'));
 //path
 const path = require('path');
 
+//ejs
+const ejs = require('ejs');
+
+//settings
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 //app.get('/'): Define una rutas GET para el endpoint /.
 app.get("/", (req, res) => {
   //res.send(): Envía una respuesta al cliente.
