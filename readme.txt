@@ -7,6 +7,8 @@ npm install ejs
 
 npm i nodemon -d
 
+npm install axios
+
 
 Los métodos HTTPS son los mismos que los de HTTP, ya que HTTPS es simplemente la versión segura de HTTP. 
 Aquí te dejo los métodos más comunes:
