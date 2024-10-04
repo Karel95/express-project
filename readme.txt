@@ -9,6 +9,8 @@ npm i nodemon -d
 
 npm install axios
 
+npm i mysql2
+
 
 Los métodos HTTPS son los mismos que los de HTTP, ya que HTTPS es simplemente la versión segura de HTTP. 
 Aquí te dejo los métodos más comunes:

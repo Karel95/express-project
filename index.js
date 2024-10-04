@@ -17,6 +17,10 @@ const path = require('path');
 //ejs
 const ejs = require('ejs');
 
+//mysql
+//const connectDB = require('db');
+//connectDB()
+
 //settings
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
